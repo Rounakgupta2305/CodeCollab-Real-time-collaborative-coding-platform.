@@ -116,10 +116,10 @@ function EditorPage() {
           <div className="mt-auto">
             <hr className="my-5" />
             <div className="flex flex-col gap-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg" onClick={copyRoomId}>
+              <button className="bg-[#ae39c3] hover:bg-[#e23bff] text-white py-2 px-4 rounded-lg" onClick={copyRoomId}>
                 Copy Room ID
               </button>
-              <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg" onClick={leaveRoom}>
+              <button className="bg-[#2fff5c] hover:bg-[#82ff9e] text-white py-2 px-4 rounded-lg" onClick={leaveRoom}>
                 Leave Room
               </button>
             </div>
