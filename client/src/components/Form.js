@@ -46,7 +46,7 @@ function Form() {
       <input type="text" value={roomId} onChange={(e) => setRoomId(e.target.value)} className="w-full rounded-md border border-gray-500 bg-darkHover px-3 py-3 focus:outline-none text-white" placeholder="Username" onKeyUp={handleInputEnter}/>
       <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="w-full rounded-md border border-gray-500 bg-darkHover px-3 py-3 focus:outline-none text-white" placeholder="Room ID" onKeyUp={handleInputEnter} />
 
-      <button className="mt-2 w-full rounded-md bg-primary px-8 py-3 text-lg font-semibold text-white" onClick={joinRoom}>
+      <button className="mt-2 w-full rounded-md bg-[#BA68C8] px-8 py-3 text-lg font-semibold text-white" onClick={joinRoom}>
         JOIN
       </button>      
       
