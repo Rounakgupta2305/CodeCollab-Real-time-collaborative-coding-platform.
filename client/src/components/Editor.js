@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { EditorState } from '@codemirror/state';
 import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { javascript } from '@codemirror/lang-javascript';
-import { githubDark } from "@uiw/codemirror-theme-github";
+import { whiteDark } from "@uiw/codemirror-themes-all"
 import { autocompletion } from '@codemirror/autocomplete';
 import { closeBrackets, closeBracketsKeymap } from '@codemirror/autocomplete';
 import { defaultKeymap } from '@codemirror/commands';
@@ -20,7 +20,7 @@ function Editor({ socketRef, roomId, onCodeChange }) {
           extensions: [
             keymap.of([...defaultKeymap, ...closeBracketsKeymap]),
             javascript(),
-            githubDark,
+            whiteDark,
             autocompletion(),
             closeBrackets(),
             lineNumbers(),
