@@ -10,6 +10,7 @@ import {
   useParams,
 } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import CodeRun from "./CodeRun";
 
 function EditorPage() {
   const [clients, setClients] = useState([]);
@@ -87,6 +88,10 @@ function EditorPage() {
     navigate("/");
   };
 
+  
+  
+  
+
   return (
     <div className="container-fluid h-screen ">
       <div className="flex h-full">
@@ -113,14 +118,23 @@ function EditorPage() {
             ))}
           </div> 
 
+          
           <div className="mt-auto">
             <hr className="my-5" />
-            <div className="flex flex-col gap-4">
-              <button className="bg-[#ae39c3] hover:bg-[#e23bff] text-white py-2 px-4 rounded-lg" onClick={copyRoomId}>
-                Copy Room ID
+            <div className="flex w-full gap-4">
+              <button
+                className="flex flex-grow items-center justify-center rounded-md bg-white p-3 text-black"
+                onClick={copyRoomId}
+                title="Copy Link"
+              >
+                Copy
               </button>
-              <button className="bg-[#0fff43] hover:bg-[#3bfa64] text-white py-2 px-4 rounded-lg" onClick={leaveRoom}>
-                Leave Room
+              <button
+                className="flex flex-grow items-center justify-center rounded-md bg-primary p-3 text-black"
+                onClick={leaveRoom}
+                title="Leave room"
+              >
+                Leave
               </button>
             </div>
           </div>
@@ -128,8 +142,13 @@ function EditorPage() {
         </div>
 
         {/* Right side */}
-        <div className="w-10/12 text-white flex flex-col h-full">
-          <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code)=> codeRef.current=code}/> 
+        <div className="w-10/12 text-white flex flex-col h-full pb-4 pt-1">
+          <div className="flex-grow">
+            <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code)=> codeRef.current=code}/> 
+          </div>
+          <div className="flex-shrink-0">
+            <CodeRun codeRef={codeRef}/>
+          </div>
         </div>
 
       </div>
