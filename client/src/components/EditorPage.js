@@ -143,10 +143,10 @@ function EditorPage() {
 
         {/* Right side */}
         <div className="w-10/12 text-white flex flex-col h-full pb-4 pt-1">
-          <div className="flex-grow">
+          <div className="flex-grow overflow-auto">
             <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code)=> codeRef.current=code}/> 
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 pt-3">
             <CodeRun codeRef={codeRef}/>
           </div>
         </div>
